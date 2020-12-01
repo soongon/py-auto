@@ -9,3 +9,4 @@ if len(input_from_user) > 0 and input_from_user.isalpha():
 else:
     print('최소 한글자 이상 문자만 입력해 주세요.')
 
+#  https://github.com/soongon/py-auto
