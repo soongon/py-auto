@@ -13,13 +13,6 @@ for i, row in enumerate(film_list):
         if j == 1:
             film_list[i][j] = float(item) * 1_000_000
 
-# for row in film_list:
-#     if row[0]:
-#         continue
-#     for j,item in enumerate(row):
-#         if j ==1:
-#             row = float(item)* 1_000_000
-
 pprint.pprint(film_list)
 
 # 이중 리스트를 저장
