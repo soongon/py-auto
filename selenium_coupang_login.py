@@ -1,13 +1,23 @@
 from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
 import time
 
 # 브라우저 띄우기
 driver = webdriver.Chrome('./chromedriver')
 
-# 쿠팡 사이트로 이동
+# 쿠팡 로그인 사이트로 이동
 driver.get('https://login.coupang.com/login/login.pang')
+time.sleep(2)
 
-time.sleep(5)
+# 아이디 인풋박스에 아이디 입력
+driver.find_element_by_name('email').send_keys('soongon@gmail.com')
+time.sleep(1)
+driver.find_element_by_name('password').send_keys('znvkd!#%')
+time.sleep(1)
+driver.find_element_by_css_selector('body > div.member-wrapper.member-wrapper--flex > div > div > form > div.login__content.login__content--trigger > button')\
+    .click()
+
+time.sleep(15)
 
 driver.close()
 
